@@ -10,15 +10,7 @@ class Home {
 	Connection c
 	PreparedStatement ps
 	ResultSet rs
-
-	def Connection conectar() throws Exception
-	{
-		Class.forName("com.mysql.jdbc.Driver")
-
-		return DriverManager.getConnection("jdbc:mysql://localhost/RentaAutos?user=root&password=root")
-
-	}
-
+	
 	def registrarUsuario(Usuario usuarionuevo) {
 		try {
 			c = this.conectar()
@@ -87,10 +79,15 @@ class Home {
 		}
 	}
 
-	def actualizar() {
-		
-		c = this.conectar()
-		
+	def actualizar() 
+	{
+		c = this.conectar()	
+	}
+	
+	def Connection conectar() throws Exception
+	{
+		Class.forName("com.mysql.jdbc.Driver")
+		return DriverManager.getConnection("jdbc:mysql://localhost/RentaAutos?user=root&password=root")
 	}
 
 }

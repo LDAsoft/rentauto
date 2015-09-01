@@ -4,6 +4,7 @@ import org.eclipse.xtend.lib.annotations.Accessors
 
 @Accessors
 class ServicioUsuario {
+	//prueba
 	Home home
 
 	def void registrarUsuario(Usuario p) throws UsuarioYaExisteException
